@@ -1,7 +1,7 @@
 @folder @moodle-upgarde @activties
 Feature: As A Moodle User,
-  I want to restore a unit scenario
-  so that restoring a unit can be tested and validated
+  I want to automate Adding a folder resource
+  so that I can test the folder resource creation
 
   Background:
     Given the following "users" exist:
