@@ -1,4 +1,4 @@
-@regression_tests_theme @resource @create_page_resource @automation_dev
+@res_automation @resource @create_page_resource @automation_dev
 Feature: Create page resource
   In order to enroll different students/staffs
   As an admin
