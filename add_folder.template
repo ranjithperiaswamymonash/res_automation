@@ -22,7 +22,7 @@ Feature: As A Moodle User,
 
     
   @javascript
-  Scenario: Validation of restoring a unit
+  Scenario: Validation of adding folder resource 
     Given I log in as "lecturer1"
     And I am on "Course 1" course homepage
      And I click on ::locator>>>course_action_menu::
