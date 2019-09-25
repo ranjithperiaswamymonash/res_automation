@@ -1,4 +1,4 @@
-@core @core_backup @moodle-upgarde
+@res_automation @core @core_backup @moodle-upgarde
 Feature: As A Moodle User,
         I want to automate Adding a Folder resource
 	so that I can test the folder resource creation
