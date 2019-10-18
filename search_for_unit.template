@@ -1,4 +1,5 @@
 @res_automation @resource @search_unit
+
 Feature: Search a course
   In order to search a course
   As an admin
