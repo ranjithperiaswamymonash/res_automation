@@ -1,0 +1,22 @@
+@res_automation @resource @search_unit
+Feature: Search a course
+  In order to search a course
+  As an admin
+  I need to search a course.
+  @javascript
+  Scenario: Search a unit scenario
+    Given the following "courses" exist:
+  ::sql>>>SELECT fullname,shortname,category-1 as category FROM res_automation.course where fullname='Maths'::
+    And the following "users" exist:
+  ::sql>>>SELECT username,firstname,lastname,email FROM res_automation.user where username in ('rper0019','jsing001','bpes0001')::
+    And the following "course enrolments" exist:
+      | user     | course | role           |
+      | bpes0001 | math102     | editingteacher |
+      | rper0019 | math102     | student        |
+    When I log in as "admin"
+    And I click on ::locator>>>close_copyright::
+    And I click on ::locator>>>all_units_link::
+    And I set the field "coursesearchbox" to "Maths"
+    And I press "Go"
+    And I should see "Maths"
+    And I wait "60" seconds
