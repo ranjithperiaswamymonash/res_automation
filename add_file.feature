@@ -26,7 +26,7 @@ Feature: As A Moodle User,
     And I click on "//*//div/a[contains(.,'Turn editing on')]" "xpath_element"
     And I click on "//li[@aria-label='General']//span[contains(text(),'Add an activity or resource')]" "xpath_element"
     And I click on "//input[@id='item_resource']" "xpath_element"
-    And I click on "Add" "button"
+    And I click on "//input[@type='submit' and @value='Add']" "xpath_element"
     And I set the following fields to these values:
       | Name        | Test-File         |
       | Description | For Test purpose    |
