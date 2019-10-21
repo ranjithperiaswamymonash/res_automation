@@ -1,4 +1,4 @@
-@res_automation @resource @create_ims_resource @automation_dev
+@res_automation @resource @create_ims_resource @_file_upload
 
 Feature: Create a moodle ims resource
 

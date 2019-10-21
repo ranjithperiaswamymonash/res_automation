@@ -1,4 +1,5 @@
-@res_automation @moodle-upgarde @activities @folder
+@res_automation @activity @create_folder
+
 Feature: As A Moodle User, 
 	I want to automate Adding a Folder resource
 	so that I can test the folder resource creation
@@ -26,7 +27,7 @@ Feature: As A Moodle User,
     And I click on "//*//div/a[contains(.,'Turn editing on')]" "xpath_element"
     And I click on "//li[@aria-label='General']//span[contains(text(),'Add an activity or resource')]" "xpath_element"
     And I click on "//label[@for='item_folder']/input" "xpath_element"
-    And I click on "Add" "button"
+    And I click on "//input[@type='submit' and @value='Add']" "xpath_element"
     And I set the following fields to these values:
       | Name        | Test-Folder         |
       | Description | For Test purpose    |

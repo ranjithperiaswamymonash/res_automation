@@ -21,7 +21,7 @@ Feature: Create a moodle assignments
     And I click on ::locator>>>turn_editing_on_link::
     And I click on ::locator>>>add_an_activity_or_resource_link::
     And I click on ::locator>>>select_assignment_activity_option::
-    And I press "Add"
+    And I click on "//input[@type='submit' and @value='Add']" "xpath_element"
     And I set the following fields to these values:
       | Assignment name | Basic Understanding |
       | Description | Assignment to test the basic understanding of students |

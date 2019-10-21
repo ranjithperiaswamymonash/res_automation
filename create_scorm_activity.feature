@@ -1,4 +1,4 @@
-@res_automation @resource @create_scorm_activity @automation_dev
+@res_automation @resource @create_scorm_activity @_file_upload
 
 Feature: Create a moodle scorm package activity
 
