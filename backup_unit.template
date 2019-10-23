@@ -1,0 +1,26 @@
+@core @core_backup @moodle-upgrade @backup
+Feature: As a Moodle User,
+  I want to automate 'Backing up a Moodle Unit'
+  So that I can verify it is working
+
+  Background:
+    Given the following "courses" exist:
+      | fullname | shortname | category | numsections |
+      | Course 1 | C1        | 0        | 10          |
+      | Course 2 | C2        | 0        | 2           |
+      | Course 3 | C3        | 0        | 2           |
+
+  @javascript
+  Scenario: To Backup a Unit
+    Given I log in as "admin"
+    And I am on "Course 1" course homepage
+    And I click on ::locator>>>unit_setting_cog::
+    And I click on "Backup" "link"
+    And I click on "Next" "button"
+    And I click on "Next" "button"
+    And I set the field "Filename" to "backup.mbz"
+    And I click on "Perform backup" "button"
+    Then I should see "The backup file was successfully created."
+    And I click on "Continue" "button"
+    Then I should see "backup.mbz"
+    And I log out
