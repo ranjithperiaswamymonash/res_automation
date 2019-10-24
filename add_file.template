@@ -1,4 +1,4 @@
-@core @core_backup @moodle-upgrade @activties
+@res_automation @core @core_backup @moodle-upgrade @activties
 Feature: As A Moodle User,
   I want to restore a unit scenario
   so that restoring a unit can be tested and validated

@@ -1,4 +1,4 @@
-@moodle-upgrade  @add_unit
+@res_automation @moodle-upgrade  @add_unit
 Feature: As a Moodle User,
   I want to automate adding a new unit
   so that I can test it is working

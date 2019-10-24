@@ -1,4 +1,4 @@
-@moodle-upgrade @activtity @survey
+@res_automation @moodle-upgrade @activtity @survey
 Feature: As A Moodle User,
   I want to automate adding a choice activty
   so that I can test the choice activity creation

@@ -1,4 +1,4 @@
-@moodle-upgarde @activties @choice
+@res_automation @moodle-upgarde @activties @choice
 Feature: As A Moodle User,
   I want to automate adding a choice activity
   so that I can test the choice activity creation

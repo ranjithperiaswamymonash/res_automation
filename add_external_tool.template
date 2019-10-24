@@ -1,4 +1,4 @@
-@moodle-upgrade @activties @external-tool
+@res_automation @moodle-upgrade @activties @external-tool
 Feature: As A Moodle User,
   I want to automate adding an External tool
   so that I can test the External Tool

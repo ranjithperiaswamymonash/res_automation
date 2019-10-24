@@ -1,4 +1,4 @@
-@moodle-upgrade @activties @glossary
+@res_automation @moodle-upgrade @activties @glossary
 Feature: As A Moodle User,
   I want to automate adding a glossary activity
   so that I can test the glossary activity creation

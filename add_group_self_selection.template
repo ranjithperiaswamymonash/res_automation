@@ -1,4 +1,4 @@
-@moodle-upgrade @activties @group-self-selection
+@res_automation @moodle-upgrade @activties @group-self-selection
 Feature: As A Moodle User,
   I want to automate adding a Group Self-Selection activity
   so that I can test the Group Self-Selection activity creation

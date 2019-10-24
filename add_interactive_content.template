@@ -1,4 +1,4 @@
-@moodle-upgrade @activties @interactive-content
+@res_automation @moodle-upgrade @activties @interactive-content
 
 Feature: As A Moodle User,
   I want to automate adding an interactive content activity

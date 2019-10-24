@@ -1,4 +1,4 @@
-@core @core_backup @moodle-upgrade @backup
+@res_automation @core @core_backup @moodle-upgrade @backup
 Feature: As a Moodle User,
   I want to automate 'Backing up a Moodle Unit'
   So that I can verify it is working
