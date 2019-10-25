@@ -1,7 +1,7 @@
-@res_automation @folder @moodle-upgarde @activties
+@res_automation @moodle-upgrade @activties @group-self-selection
 Feature: As A Moodle User,
-  I want to automate Adding a folder resource
-  so that I can test the folder resource creation
+  I want to automate adding a Group Self-Selection activity
+  so that I can test the Group Self-Selection activity creation
 
   Background:
     Given the following "users" exist:
@@ -22,20 +22,21 @@ Feature: As A Moodle User,
 
     
   @javascript
-  Scenario: Validation of adding folder resource 
+  Scenario: Adding Group Self-Selection activity
     Given I log in as "lecturer1"
     And I am on "Course 1" course homepage
      And I click on ::locator>>>course_action_menu::
    And I click on ::locator>>>turn_editing_on_link::
    And I click on ::locator>>>add_an_activity_or_resource_link::
-    And I click on ::locator>>>folder_radio_button::
-    And I click on "Add" "button"
+    And I click on ::locator>>>add_group_self_selection_radio::
+    And I click on ::locator>>>add_activity_resource_button::
     And I set the following fields to these values:
-      | Name        | Test-Folder         |
-      | Description | For Test purpose    |
+      | Name        | Test-group-selection           |
+      | Description | For Test Purpose        |
     And I click on "Save and display" "button"
-    Then I should see "Test-Folder"
+    Then I should see "Test-group-selection"
     And I log out
     And I log in as "student1"
     And I am on "Course 1" course homepage
-    Then I should see "Test-Folder"
+    Then I should see "Test-group-selection"
+

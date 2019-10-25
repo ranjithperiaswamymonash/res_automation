@@ -1,7 +1,7 @@
-@res_automation @folder @moodle-upgarde @activties
+@res_automation @moodle-upgrade @activties @external-tool
 Feature: As A Moodle User,
-  I want to automate Adding a folder resource
-  so that I can test the folder resource creation
+  I want to automate adding an External tool
+  so that I can test the External Tool
 
   Background:
     Given the following "users" exist:
@@ -22,20 +22,20 @@ Feature: As A Moodle User,
 
     
   @javascript
-  Scenario: Validation of adding folder resource 
+  Scenario: Adding External Tool
     Given I log in as "lecturer1"
     And I am on "Course 1" course homepage
      And I click on ::locator>>>course_action_menu::
    And I click on ::locator>>>turn_editing_on_link::
    And I click on ::locator>>>add_an_activity_or_resource_link::
-    And I click on ::locator>>>folder_radio_button::
-    And I click on "Add" "button"
+    And I click on ::locator>>>external_tool_radio_option::
+    And I click on ::locator>>>add_activity_resource_button::
     And I set the following fields to these values:
-      | Name        | Test-Folder         |
-      | Description | For Test purpose    |
+      | Activity name        | Test-External-Tool |
     And I click on "Save and display" "button"
-    Then I should see "Test-Folder"
+    Then I should see "Test-External-Tool"
     And I log out
     And I log in as "student1"
     And I am on "Course 1" course homepage
-    Then I should see "Test-Folder"
+    Then I should see "Test-External-Tool"
+
