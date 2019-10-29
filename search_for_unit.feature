@@ -25,5 +25,4 @@ Feature: Search a course
     And I set the field "coursesearchbox" to "Maths"
     And I press "Go"
     And I should see "Maths"
-    And I wait "60" seconds
     
