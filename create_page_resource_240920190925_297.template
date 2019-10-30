@@ -1,8 +1,8 @@
 @res_automation @resource @create_page_resource @automation_dev
-Feature: Create page resource
-  In order to enroll different students/staffs
+Feature: Create a moodle page resource
+  In order to create a page resource
   As an admin
-  I need to be able to enrol student as a role
+  I need to be create page resource so that students can use it in course.
   @javascript
   Scenario: Create page resource
     Given the following "courses" exist:
