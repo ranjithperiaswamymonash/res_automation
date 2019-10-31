@@ -36,7 +36,7 @@ Feature: Create a moodle feedback activity
 
       | rper0019 | math102     | student        |
 
-    When I log in as "admin"
+    When I log in as "bpes0001"
 
     And I am on "Maths" course homepage
 

@@ -1,10 +1,11 @@
-@res_automation @activity @create_groupselfselection_activity
-Feature: Create a moodle Group self-selection activity
-  In order to create a Group self-selection activity
+@res_automation @activity @create_attendance_activity
+Feature: Create a moodle attendance activity
+  In order to create a attendance activity
   As an admin
-  I need to be create Group self-selection activity so that students can use it in course.
+  I need to be create attendance activity so that students can use it in course.
+
   @javascript
-  Scenario: Create a moodle Group self-selection activity
+  Scenario: Create a moodle attendance activity
     Given the following "courses" exist:
       | fullname | shortname | category |
       | Maths    | math102   | 0        |
@@ -22,14 +23,14 @@ Feature: Create a moodle Group self-selection activity
     And I click on "//*//i[@title='Actions menu']" "xpath_element"
     And I click on "//*//div/a[contains(.,'Turn editing on')]" "xpath_element"
     And I click on "//li[@aria-label='General']//span[contains(text(),'Add an activity or resource')]" "xpath_element"
-    And I click on "//span[@class='typename' and text()='Group self-selection']" "xpath_element"
+    And I click on "//span[@class='typename' and text()='Attendance']" "xpath_element"
     And I click on "//input[@type='submit' and @value='Add']" "xpath_element"
     And I set the following fields to these values:
-      | Name | Test Group self-selection for Regression |
-      | Description  | Show Group self-selection on course page |
+      | Name        | Attendance Test             |
+      | Description | Test Attendance description |
     And I click on "//input[@value='Save and return to course']" "xpath_element"
     And I log out
     And I log in as "rper0019"
     And I am on "Maths" course homepage
-    Then I should see "Test Group self-selection for Regression"
+    Then I should see "Attendance Test"
     And I log out

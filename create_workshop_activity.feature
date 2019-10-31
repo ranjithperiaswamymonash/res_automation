@@ -17,7 +17,7 @@ Feature: Create a moodle Workshop activity
       | user     | course  | role           |
       | bpes0001 | math102 | editingteacher |
       | rper0019 | math102 | student        |
-    When I log in as "admin"
+    When I log in as "bpes0001"
     And I am on "Maths" course homepage
     And I click on "//*//i[@title='Actions menu']" "xpath_element"
     And I click on "//*//div/a[contains(.,'Turn editing on')]" "xpath_element"
