@@ -5,9 +5,9 @@ Feature: As A Moodle User,
 
   Background:
     Given the following "users" exist:
-      | username | firstname | lastname | email |
-      | student1 | Student | 1 | student1@example.com  |
-      | lecturer1| lecturer| 1 | lecturer1@example.com |
+      | username  | firstname | lastname | email                 |
+      | student1  | Student   | 1        | student1@example.com  |
+      | lecturer1 | lecturer  | 1        | lecturer1@example.com |
 
     And the following "courses" exist:
       | fullname | shortname | category | numsections |
@@ -16,25 +16,25 @@ Feature: As A Moodle User,
       | Course 3 | C3        | 0        | 2           |
 
     And the following "course enrolments" exist:
-      | user     | course | role |
-      | student1 | C1     | student        |
-      | lecturer1| C1     | editingteacher |
+      | user      | course | role           |
+      | student1  | C1     | student        |
+      | lecturer1 | C1     | editingteacher |
 
-    
+
   @javascript
   Scenario: Validation of creating attendance activity
     Given I log in as "lecturer1"
     And I am on "Course 1" course homepage
-     And I click on ::locator>>>course_action_menu::
-   And I click on ::locator>>>turn_editing_on_link::
-   And I click on ::locator>>>add_an_activity_or_resource_link::
+    And I click on ::locator>>>course_action_menu::
+    And I click on ::locator>>>turn_editing_on_link::
+    And I click on ::locator>>>add_an_activity_or_resource_link::
     And I click on ::locator>>>choice_radio_button::
     And I click on ::locator>>>add_activity_resource_button::
     And I set the following fields to these values:
-      | Choice name        | Test-Choice         |
-      | Description        | For Test purpose    |
-      | Option 1           |  5                  |
-    
+      | Choice name | Test-Choice      |
+      | Description | For Test purpose |
+      | Option 1    | 5                |
+
     And I click on "Save and display" "button"
     And I click on "5" "radio"
     And I click on "Save my choice" "button"
