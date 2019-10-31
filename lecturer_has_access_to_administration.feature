@@ -20,7 +20,7 @@ Feature: As A Moodle Adminstrator User,
 
   @javascript
   Scenario: Login with administrator permissions Feature
-    Given I log in as "admin"
+    When I log in as "admin"
     And I should see "Admin User"
     And I should see "Acceptance test site"
     # Has Admin permissions
@@ -35,7 +35,7 @@ Feature: As A Moodle Adminstrator User,
     And I follow "Profile" in the user menu
     And I log out
     And I log in as "student1"
-    And I should see "Student 1"
+    Then I should see "Student 1"
     And I should see "Acceptance test site"
     # Does NOT have Admin permissions
     And I should not see "Site administration"
