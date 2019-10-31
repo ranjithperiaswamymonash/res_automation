@@ -7,9 +7,9 @@ Feature: As A Moodle User,
 
   Background:
     Given the following "users" exist:
-      | username | firstname | lastname | email |
-      | student1 | Student | 1 | student1@example.com  |
-      | lecturer1| lecturer| 1 | lecturer1@example.com |
+      | username  | firstname | lastname | email                 |
+      | student1  | Student   | 1        | student1@example.com  |
+      | lecturer1 | lecturer  | 1        | lecturer1@example.com |
 
     And the following "courses" exist:
       | fullname | shortname | category | numsections |
@@ -18,22 +18,22 @@ Feature: As A Moodle User,
       | Course 3 | C3        | 0        | 2           |
 
     And the following "course enrolments" exist:
-      | user     | course | role |
-      | student1 | C1     | student        |
-      | lecturer1| C1     | editingteacher |
+      | user      | course | role           |
+      | student1  | C1     | student        |
+      | lecturer1 | C1     | editingteacher |
 
-    
+
   @javascript
   Scenario:  Adding Group interactive content
     Given I log in as "lecturer1"
     And I am on "Course 1" course homepage
-     And I click on ::locator>>>course_action_menu::
-   And I click on ::locator>>>turn_editing_on_link::
-   And I click on ::locator>>>add_an_activity_or_resource_link::
+    And I click on ::locator>>>course_action_menu::
+    And I click on ::locator>>>turn_editing_on_link::
+    And I click on ::locator>>>add_an_activity_or_resource_link::
     And I click on ::locator>>>add_interactive_content_radio::
     And I click on ::locator>>>add_activity_resource_button::
     And I set the following fields to these values:
-      | Description | For Test Purpose  |
+      | Description | For Test Purpose |
     And I click on "Save and display" "button"
     And I wait "5" seconds
     Then I should see "Test-Interactive-Content"

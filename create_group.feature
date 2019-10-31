@@ -7,17 +7,17 @@ Feature: The creation of a group can be viewed and verified by students and teac
   Background:
     Given the following "courses" exist:
       | fullname | shortname | format |
-      | Course 1 | C1 | topics |
+      | Course 1 | C1        | topics |
     And the following "users" exist:
-      | username | firstname | lastname | email |
-      | teacher1 | Teacher | 1 | teacher1@example.com |
-      | student1 | Student | 1 | student1@example.com |
-      | student2 | Student | 2 | student2@example.com |
+      | username | firstname | lastname | email                |
+      | teacher1 | Teacher   | 1        | teacher1@example.com |
+      | student1 | Student   | 1        | student1@example.com |
+      | student2 | Student   | 2        | student2@example.com |
     And the following "course enrolments" exist:
-      | user | course | role |
-      | teacher1 | C1 | editingteacher |
-      | student1 | C1 | student |
-      | student2 | C1 | student |
+      | user     | course | role           |
+      | teacher1 | C1     | editingteacher |
+      | student1 | C1     | student        |
+      | student2 | C1     | student        |
 
   @javascript
   Scenario: A student can see the group description when visible groups are set. Teachers can see group details.
@@ -31,7 +31,7 @@ Feature: The creation of a group can be viewed and verified by students and teac
     And I navigate to "Users > Groups" in current page administration
     And I press "Create group"
     And I set the following fields to these values:
-      | Group name | Group A |
+      | Group name        | Group A                 |
       | Group description | Description for Group A |
     And I press "Save changes"
     And I press "Create group"

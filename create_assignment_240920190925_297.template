@@ -12,9 +12,9 @@ Feature: Create a moodle assignments
     And the following "users" exist:
   ::sql>>>SELECT username,firstname,lastname,email FROM res_automation.user where username in ('rper0019','jsing001','bpes0001')::
     And the following "course enrolments" exist:
-      | user     | course | role           |
-      | bpes0001 | math102     | editingteacher |
-      | rper0019 | math102     | student        |
+      | user     | course  | role           |
+      | bpes0001 | math102 | editingteacher |
+      | rper0019 | math102 | student        |
     When I log in as "admin"
     And I am on "Maths" course homepage
     And I click on ::locator>>>course_action_menu::
@@ -23,21 +23,21 @@ Feature: Create a moodle assignments
     And I click on ::locator>>>select_assignment_activity_option::
     And I click on "//input[@type='submit' and @value='Add']" "xpath_element"
     And I set the following fields to these values:
-      | Assignment name | Basic Understanding |
-      | Description | Assignment to test the basic understanding of students |
-      | id_allowsubmissionsfromdate_enabled | 1 |
-      | id_allowsubmissionsfromdate_day | ::py>>>f"{dat.now() - timedelta(days=10):%d}".lstrip('0'):: |
-      | id_allowsubmissionsfromdate_month | ::py>>>f"{dat.now() - timedelta(days=10):%m}".lstrip('0'):: |
-      | id_allowsubmissionsfromdate_year | ::py>>>f"{dat.now() - timedelta(days=10):%Y}".lstrip('0'):: |
-      | id_duedate_enabled | 1 |
-      | id_duedate_day | ::py>>>f"{dat.now():%d}".lstrip('0'):: |
-      | id_duedate_month | ::py>>>f"{dat.now():%m}".lstrip('0'):: |
-      | id_duedate_year | ::py>>>f"{dat.now():%Y}".lstrip('0'):: |
-      | id_gradingduedate_enabled | 1 |
-      | id_gradingduedate_day | ::py>>>f"{dat.now() + timedelta(days=1):%d}".lstrip('0'):: |
-      | id_gradingduedate_month | ::py>>>f"{dat.now() + timedelta(days=1):%m}".lstrip('0'):: |
-      | id_gradingduedate_year | ::py>>>f"{dat.now() + timedelta(days=1):%Y}".lstrip('0'):: |
-      | Maximum number of uploaded files  | 1 |
+      | Assignment name                     | Basic Understanding                                         |
+      | Description                         | Assignment to test the basic understanding of students      |
+      | id_allowsubmissionsfromdate_enabled | 1                                                           |
+      | id_allowsubmissionsfromdate_day     | ::py>>>f"{dat.now() - timedelta(days=10):%d}".lstrip('0'):: |
+      | id_allowsubmissionsfromdate_month   | ::py>>>f"{dat.now() - timedelta(days=10):%m}".lstrip('0'):: |
+      | id_allowsubmissionsfromdate_year    | ::py>>>f"{dat.now() - timedelta(days=10):%Y}".lstrip('0'):: |
+      | id_duedate_enabled                  | 1                                                           |
+      | id_duedate_day                      | ::py>>>f"{dat.now():%d}".lstrip('0')::                      |
+      | id_duedate_month                    | ::py>>>f"{dat.now():%m}".lstrip('0')::                      |
+      | id_duedate_year                     | ::py>>>f"{dat.now():%Y}".lstrip('0')::                      |
+      | id_gradingduedate_enabled           | 1                                                           |
+      | id_gradingduedate_day               | ::py>>>f"{dat.now() + timedelta(days=1):%d}".lstrip('0')::  |
+      | id_gradingduedate_month             | ::py>>>f"{dat.now() + timedelta(days=1):%m}".lstrip('0')::  |
+      | id_gradingduedate_year              | ::py>>>f"{dat.now() + timedelta(days=1):%Y}".lstrip('0')::  |
+      | Maximum number of uploaded files    | 1                                                           |
     And I click on ::locator>>>online_text_checkbox::
     And I click on ::locator>>>online_text_word_limit_checkbox::
     And I set the field with xpath ::locator>>>online_text_word_limit_textbox:: to "10"

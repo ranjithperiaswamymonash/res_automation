@@ -3,6 +3,7 @@ Feature: Create a moodle page resource
   In order to create a page resource
   As an admin
   I need to be create page resource so that students can use it in course.
+
   @javascript
   Scenario: Create page resource
     Given the following "courses" exist:
@@ -10,9 +11,9 @@ Feature: Create a moodle page resource
     And the following "users" exist:
   ::sql>>>SELECT username,firstname,lastname,email FROM res_automation.user where username in ('rper0019','jsing001','bpes0001')::
     And the following "course enrolments" exist:
-      | user     | course | role           |
-      | bpes0001 | math102     | editingteacher |
-      | rper0019 | math102     | student        |
+      | user     | course  | role           |
+      | bpes0001 | math102 | editingteacher |
+      | rper0019 | math102 | student        |
     When I log in as "admin"
     And I am on "Maths" course homepage
     And I click on ::locator>>>course_action_menu::
@@ -22,11 +23,11 @@ Feature: Create a moodle page resource
     And I press "Add"
     And I expand all fieldsets
     And I set the following fields to these values:
-      | Name | Test page name |
-      | Description | Test page description <br> Test page description <br> Test page description <br> Test page description <br> Test page description |
-      | Page content | This is a page |
-      | Display description on course page | 1 |
-      | Availability      | Show on course page |
+      | Name                               | Test page name                                                                                                                    |
+      | Description                        | Test page description <br> Test page description <br> Test page description <br> Test page description <br> Test page description |
+      | Page content                       | This is a page                                                                                                                    |
+      | Display description on course page | 1                                                                                                                                 |
+      | Availability                       | Show on course page                                                                                                               |
     And I click on ::locator>>>display_page_desc_checkbox::
     And I click on ::locator>>>save_return_cource_button::
     And I log out

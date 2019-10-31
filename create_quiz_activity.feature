@@ -14,27 +14,27 @@ Feature: Create a moodle quiz activity
 
     Given the following "courses" exist:
 
-      | fullname   | shortname   |   category |
+      | fullname | shortname | category |
 
-      | Maths      | math102     |          0 |
+      | Maths    | math102   | 0        |
 
     And the following "users" exist:
 
-      | username   | firstname   | lastname   | email               |
+      | username | firstname | lastname   | email               |
 
-      | bpes0001   | Bhavna      | Peswani    | bpes0001@monash.edu |
+      | bpes0001 | Bhavna    | Peswani    | bpes0001@monash.edu |
 
-      | rper0019   | Ranjith     | Periaswamy | rper0019@monash.edu |
+      | rper0019 | Ranjith   | Periaswamy | rper0019@monash.edu |
 
-      | jsing001   | Jashpal     | Sing       | jsing001@monash.edu |
+      | jsing001 | Jashpal   | Sing       | jsing001@monash.edu |
 
     And the following "course enrolments" exist:
 
-      | user     | course | role           |
+      | user     | course  | role           |
 
-      | bpes0001 | math102     | editingteacher |
+      | bpes0001 | math102 | editingteacher |
 
-      | rper0019 | math102     | student        |
+      | rper0019 | math102 | student        |
 
     When I log in as "bpes0001"
 
@@ -52,7 +52,7 @@ Feature: Create a moodle quiz activity
 
     And I set the following fields to these values:
 
-      | Name | Test Quiz |
+      | Name        | Test Quiz             |
       | Description | Test Quiz Description |
 
     And I click on "//input[@value='Save and return to course']" "xpath_element"

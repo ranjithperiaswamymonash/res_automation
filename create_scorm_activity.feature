@@ -14,27 +14,27 @@ Feature: Create a moodle scorm package activity
 
     Given the following "courses" exist:
 
-      | fullname   | shortname   |   category |
+      | fullname | shortname | category |
 
-      | Maths      | math102     |          0 |
+      | Maths    | math102   | 0        |
 
     And the following "users" exist:
 
-      | username   | firstname   | lastname   | email               |
+      | username | firstname | lastname   | email               |
 
-      | bpes0001   | Bhavna      | Peswani    | bpes0001@monash.edu |
+      | bpes0001 | Bhavna    | Peswani    | bpes0001@monash.edu |
 
-      | rper0019   | Ranjith     | Periaswamy | rper0019@monash.edu |
+      | rper0019 | Ranjith   | Periaswamy | rper0019@monash.edu |
 
-      | jsing001   | Jashpal     | Sing       | jsing001@monash.edu |
+      | jsing001 | Jashpal   | Sing       | jsing001@monash.edu |
 
     And the following "course enrolments" exist:
 
-      | user     | course | role           |
+      | user     | course  | role           |
 
-      | bpes0001 | math102     | editingteacher |
+      | bpes0001 | math102 | editingteacher |
 
-      | rper0019 | math102     | student        |
+      | rper0019 | math102 | student        |
 
     When I log in as "bpes0001"
 
@@ -52,11 +52,11 @@ Feature: Create a moodle scorm package activity
 
     And I set the following fields to these values:
 
-      | Name | Test Scorm package |
+      | Name        | Test Scorm package             |
       | Description | Test Scorm package Description |
 
     And I upload "mod/scorm/tests/packages/singlesco_scorm12.zip" file to "Package file" filemanager
-    
+
     And I click on "//input[@value='Save and return to course']" "xpath_element"
 
     And I log out

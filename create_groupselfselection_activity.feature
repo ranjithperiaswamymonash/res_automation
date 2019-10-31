@@ -3,6 +3,7 @@ Feature: Create a moodle Group self-selection activity
   In order to create a Group self-selection activity
   As an admin
   I need to be create Group self-selection activity so that students can use it in course.
+
   @javascript
   Scenario: Create a moodle Group self-selection activity
     Given the following "courses" exist:
@@ -25,8 +26,8 @@ Feature: Create a moodle Group self-selection activity
     And I click on "//span[@class='typename' and text()='Group self-selection']" "xpath_element"
     And I click on "//input[@type='submit' and @value='Add']" "xpath_element"
     And I set the following fields to these values:
-      | Name | Test Group self-selection for Regression |
-      | Description  | Show Group self-selection on course page |
+      | Name        | Test Group self-selection for Regression |
+      | Description | Show Group self-selection on course page |
     And I click on "//input[@value='Save and return to course']" "xpath_element"
     And I log out
     And I log in as "rper0019"

@@ -5,18 +5,18 @@ Feature: As A Moodle User,
 
   Background:
     Given the following "users" exist:
-      | username | firstname | lastname | email |
-      | student1 | Student | 1 | student1@example.com  |
-      | lecturer1| lecturer| 1 | lecturer1@example.com |
+      | username  | firstname | lastname | email                 |
+      | student1  | Student   | 1        | student1@example.com  |
+      | lecturer1 | lecturer  | 1        | lecturer1@example.com |
     And the following "courses" exist:
       | fullname | shortname | category | numsections |
       | Course 1 | C1        | 0        | 10          |
       | Course 2 | C2        | 0        | 2           |
       | Course 3 | C3        | 0        | 2           |
     And the following "course enrolments" exist:
-      | user     | course | role |
-      | student1 | C1     | student        |
-      | lecturer1| C1     | editingteacher |
+      | user      | course | role           |
+      | student1  | C1     | student        |
+      | lecturer1 | C1     | editingteacher |
 
   @javascript
   Scenario: Adding Wiki Activity
@@ -28,11 +28,11 @@ Feature: As A Moodle User,
     And I click on "//input[@id='item_wiki']" "xpath_element"
     And I click on "//input[@value='Add']" "xpath"
     And I set the following fields to these values:
-      | Wiki name        | Test Wiki               |
-      | Description      | For Test Purpose        |
-      | First page name  | Test First Page         |
-      | Default format   | HTML                    |
-      | Force format     | 1                       |
+      | Wiki name       | Test Wiki        |
+      | Description     | For Test Purpose |
+      | First page name | Test First Page  |
+      | Default format  | HTML             |
+      | Force format    | 1                |
     And I press "Save and display"
     And I should see "Test Wiki"
     And I log out

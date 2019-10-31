@@ -3,16 +3,17 @@ Feature: Create a moodle label resource
   In order to create a label resource
   As an admin
   I need to be create label resource so that students can use it in course.
+
   @javascript
   Scenario: Create a moodle label resource
     Given the following "courses" exist:
-    ::sql>>>SELECT fullname,shortname,category-1 as category FROM res_automation.course where fullname='Maths'::
+  ::sql>>>SELECT fullname,shortname,category-1 as category FROM res_automation.course where fullname='Maths'::
     And the following "users" exist:
-    ::sql>>>SELECT username,firstname,lastname,email FROM res_automation.user where username in ('rper0019','jsing001','bpes0001')::
+  ::sql>>>SELECT username,firstname,lastname,email FROM res_automation.user where username in ('rper0019','jsing001','bpes0001')::
     And the following "course enrolments" exist:
-      | user     | course | role           |
-      | bpes0001 | math102     | editingteacher |
-      | rper0019 | math102     | student        |
+      | user     | course  | role           |
+      | bpes0001 | math102 | editingteacher |
+      | rper0019 | math102 | student        |
     When I log in as "admin"
     And I am on "Maths" course homepage
     And I click on ::locator>>>course_action_menu::
@@ -21,8 +22,8 @@ Feature: Create a moodle label resource
     And I click on ::locator>>>select_label_resource_option::
     And I press "Add"
     And I set the following fields to these values:
-      | Label text | Test Label for Regression |
-      | Availability      | Show on course page |
+      | Label text   | Test Label for Regression |
+      | Availability | Show on course page       |
     And I click on ::locator>>>save_return_cource_button::
     And I log out
     And I log in as "rper0019"
