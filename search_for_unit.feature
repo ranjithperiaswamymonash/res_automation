@@ -6,7 +6,7 @@ Feature: Search a course
 
 
   @javascript
-  Scenario: Create a moodle Wiki activity
+  Scenario: Search for a course
     Given the following "courses" exist:
       | fullname | shortname | category |
       | Maths    | math102   | 0        |
