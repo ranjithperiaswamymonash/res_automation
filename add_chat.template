@@ -39,5 +39,3 @@ Feature: As A Moodle User,
     And I log in as "student1"
     And I am on "Course 1" course homepage
     Then I should see "Test-Chat"
-
-  add_activity_resource_button
