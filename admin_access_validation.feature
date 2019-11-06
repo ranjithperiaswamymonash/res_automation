@@ -1,4 +1,4 @@
-@res_automation @profile @lecturer_has_admin
+@res_automation @profile @admin_access_validation @access_dashboard
 Feature: As A Moodle Adminstrator User,
   I want to be able to login with Administrator permissions
   so that I can access the administrator features
