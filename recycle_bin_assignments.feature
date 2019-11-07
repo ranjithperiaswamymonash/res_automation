@@ -1,7 +1,7 @@
-@res_automation @resource @recycle_bin
+@res_automation @activity @recycle_bin
 Feature: Basic recycle bin functionality
   As a teacher
-  I want be able to recover deleted content and manage the recycle bin content
+  I want be able to delete content and manage the recycle bin content
   So that I can fix an accidental deletion and clean the recycle bin
 
 
